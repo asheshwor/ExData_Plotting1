@@ -27,8 +27,11 @@ with(eltab, plot(Time2, Voltage, type="n",
                  xlab="datetime", ylab="Voltage"))
 with(eltab, lines(Time2, Voltage))
 #col 1, row 2
+ally <- c(eltab$Sub_metering_1, eltab$Sub_metering_2, eltab$Sub_metering_3)
+ylimit <- c(min(allx, na.rm=TRUE), max(allx, na.rm=TRUE))
 with(eltab, plot(Time2, Sub_metering_1, type="n",
-                 xlab="", ylab="Energy sub metering"))
+                 xlab = "", ylab="Energy sub metering",
+                 ylim = ylimit))
 with(eltab, lines(Time2, Sub_metering_1))
 with(eltab, lines(Time2, Sub_metering_2, col="red"))
 with(eltab, lines(Time2, Sub_metering_3, col="blue"))
