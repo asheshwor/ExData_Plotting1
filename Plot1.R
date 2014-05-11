@@ -1,4 +1,4 @@
-##Exploratory Data Analysis course project 1
+##Exploratory Data Analysis course project 1 - Part 1
 ## Date: 2014-05-11
 
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
