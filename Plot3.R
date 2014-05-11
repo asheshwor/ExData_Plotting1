@@ -16,9 +16,13 @@ eltab$Time2 <- strptime(paste(eltab$Date, eltab$Time), "%Y-%m-%d %H:%M:%S", )
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #*     Generate plot 3
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+##calculate x and y limits
+ally <- c(eltab$Sub_metering_1, eltab$Sub_metering_2, eltab$Sub_metering_3)
+ylimit <- c(min(allx, na.rm=TRUE), max(allx, na.rm=TRUE))
 png(file="Plot3.png", 480, 480) #open png device
 with(eltab, plot(Time2, Sub_metering_1, type="n",
-                 xlab="", ylab="Energy sub metering"))
+                 xlab = "", ylab="Energy sub metering",
+                 ylim = ylimit))
 with(eltab, lines(Time2, Sub_metering_1))
 with(eltab, lines(Time2, Sub_metering_2, col="red"))
 with(eltab, lines(Time2, Sub_metering_3, col="blue"))
