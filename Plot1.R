@@ -4,7 +4,7 @@
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 #*     Read and prepare data
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-eldata <- "C:/Users/a1634565/Dropbox/Napier/PhD/Rcourse/Expdata/household_power_consumption.txt"
+eldata <- "Expdata/household_power_consumption.txt"
 eltab <- read.table(eldata, header=TRUE, sep=";", na.strings = c("?"), stringsAsFactors=FALSE)
 ## Convert Date column to date format
 eltab$Date <- (as.Date(eltab$Date, "%d/%m/%Y"))
@@ -18,7 +18,6 @@ eltab$Time2 <- strptime(paste(eltab$Date, eltab$Time), "%Y-%m-%d %H:%M:%S", )
 #* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 png(file="Plot1.png", 480, 480) #open png device
 hist(eltab$Global_active_power, col="red",
-     xlab="Global Active Power (kilowatts",
+     xlab="Global Active Power (kilowatts)",
      main="Global Active Power")
 dev.off() #close png device
-#rug(eltab$Global_active_power)
