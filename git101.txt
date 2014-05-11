@@ -1,0 +1,35 @@
+###### Creating and pushing a new repo###########
+
+1. git config --global user.email "<email>"
+   git config --global user.name "<uer name>"
+2. Create a repo using website
+3. Change directory to your repo 
+   git init
+4. Change a file and add/commit it 
+   git add <file>
+   git commit -m '<message>' 
+
+-to add all the files 
+   git add -A 
+-to commit for all 
+   git commit -a
+ 
+5. Create a shortcut name to your git 
+   git remote add <name> <gitlink>
+6. push or pull 
+   git pull <name> master 
+   git piush <name> master 
+*******************************
+
+#########Contributing to Existing Repo####################
+1.Goto working folder
+2.open git bash or terminal
+3.git init
+4.clone git to local directory
+	git clone <remote Address>
+5.open directory and edit the files 
+6.save and commit as above
+	git commit -m "<message>"
+7.Create a shortcut name to remote git address
+	git remote add <name> <gitlink>
+8.git push <name> master
